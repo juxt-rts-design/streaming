@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineLab - Plateforme de Streaming Éducative</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <span class="logo">🎬 CineLab</span>
+            <input type="text" class="search-input" placeholder="Rechercher une chaîne..." id="searchInput">
+        </div>
+    </nav>
+
+    <!-- CATÉGORIES -->
+    <div class="categories" id="categoriesContainer"></div>
+
+    <!-- GRILLE DES CHAÎNES -->
+    <main class="container">
+        <div class="channel-grid" id="channelGrid">
+            <p>Chargement...</p>
+        </div>
+    </main>
+
+    <!-- PLAYER -->
+    <div class="player-wrapper" id="playerWrapper">
+        <div class="player-container">
+            <div class="player-top">
+                <span class="player-title" id="playerTitle">CineLab</span>
+                <button class="close-btn" id="closePlayer" aria-label="Fermer">✕</button>
+            </div>
+            <div class="player-stage">
+                <video id="videoPlayer" controls playsinline preload="auto"></video>
+                <div class="player-overlay" id="playerOverlay">
+                    <div class="player-spinner"></div>
+                    <p id="playerStatus">Préparation du flux…</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
