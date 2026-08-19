@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   apps: [
     {
-      name: 'cine-lab',
+      name: 'streaming',
       cwd: path.join(__dirname, '..'),
       script: 'server/index.js',
       instances: 1,
